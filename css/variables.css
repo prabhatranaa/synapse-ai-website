@@ -1,0 +1,95 @@
+/* ==========================================================================
+   SYNAPSE ENTERPRISE AI - DESIGN SYSTEM TOKENS
+   ========================================================================== */
+
+:root {
+  /* Cinematic Background Palette */
+  --bg-pure-black: #020307;
+  --bg-cinema-base: #04060d;
+  --bg-cinema-elevated: #080c1a;
+  --bg-cinema-card: rgba(10, 16, 33, 0.65);
+  --bg-cinema-card-hover: rgba(14, 22, 45, 0.85);
+  --bg-cinema-glass: rgba(8, 14, 28, 0.55);
+  --bg-glass-input: rgba(15, 23, 42, 0.5);
+
+  /* Primary Electric & Violet Accents */
+  --electric-blue: #00f0ff;
+  --electric-cyan: #38bdf8;
+  --electric-blue-dark: #0284c7;
+  --electric-blue-deep: #0369a1;
+  --subtle-violet: #8b5cf6;
+  --electric-violet: #a855f7;
+  --deep-violet: #6d28d9;
+  --neon-emerald: #10b981;
+  --neon-amber: #f59e0b;
+
+  /* Accent Gradients */
+  --gradient-electric: linear-gradient(135deg, #00f0ff 0%, #38bdf8 50%, #8b5cf6 100%);
+  --gradient-electric-subtle: linear-gradient(135deg, rgba(0, 240, 255, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+  --gradient-violet-blue: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  --gradient-text-hero: linear-gradient(180deg, #ffffff 20%, #cbd5e1 65%, #94a3b8 100%);
+  --gradient-text-accent: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  --gradient-card-border: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(56, 189, 248, 0.15) 50%, rgba(139, 92, 246, 0.1) 100%);
+  --gradient-dark-radial: radial-gradient(circle at center, rgba(14, 25, 52, 0.4) 0%, rgba(4, 6, 13, 0.95) 75%);
+
+  /* Typography Colors */
+  --text-pure: #ffffff;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-faint: #475569;
+  --text-cyan: #38bdf8;
+  --text-violet: #c084fc;
+
+  /* Glassmorphism & Borders */
+  --border-ultra-subtle: rgba(255, 255, 255, 0.05);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-highlight: rgba(56, 189, 248, 0.45);
+  --border-violet: rgba(139, 92, 246, 0.4);
+  --border-glass-card: rgba(255, 255, 255, 0.08);
+
+  /* Glass Blur Filters */
+  --glass-blur-sm: blur(10px);
+  --glass-blur-md: blur(20px);
+  --glass-blur-lg: blur(32px);
+  --glass-blur-xl: blur(48px);
+
+  /* Shadows & Glows */
+  --glow-electric: 0 0 35px rgba(0, 240, 255, 0.35);
+  --glow-electric-sm: 0 0 16px rgba(0, 240, 255, 0.25);
+  --glow-cyan-card: 0 8px 32px -4px rgba(2, 132, 199, 0.22);
+  --glow-violet-soft: 0 0 35px rgba(139, 92, 246, 0.28);
+  --shadow-card: 0 20px 50px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.07);
+  --shadow-card-hover: 0 30px 65px -12px rgba(0, 0, 0, 0.85), 0 0 25px rgba(56, 189, 248, 0.15), 0 0 0 1px rgba(56, 189, 248, 0.35);
+  --shadow-button-primary: 0 10px 28px -4px rgba(2, 132, 199, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  --shadow-button-primary-hover: 0 14px 36px -2px rgba(0, 240, 255, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+
+  /* Typography Stack */
+  --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Roboto Mono', monospace;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+
+  /* Layout Spacing */
+  --container-max-width: 1320px;
+  --container-hero-width: 1400px;
+  --header-height: 80px;
+  --section-padding-y: 110px;
+  --section-padding-y-sm: 70px;
+
+  /* Transitions & Animation Easing */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-quick: 180ms ease;
+  --transition-normal: 300ms var(--ease-cinematic);
+  --transition-slow: 600ms var(--ease-cinematic);
+  --transition-extended: 900ms var(--ease-cinematic);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
+  --radius-pill: 9999px;
+}

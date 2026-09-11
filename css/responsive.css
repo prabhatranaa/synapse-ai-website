@@ -1,0 +1,231 @@
+/* ==========================================================================
+   SYNAPSE ENTERPRISE AI - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   DESKTOP & LARGE LAPTOPS (Max 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .hero-grid {
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bento-card-large {
+    grid-column: span 12;
+  }
+
+  .bento-card-medium {
+    grid-column: span 6;
+  }
+
+  .bento-card-third {
+    grid-column: span 6;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    grid-template-columns: 1.5fr repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   TABLETS & MEDIUM SCREENS (Max 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding-y: 80px;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--header-height) + 30px);
+    padding-bottom: 50px;
+    min-height: auto;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-description {
+    max-width: 640px;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-trust-strip {
+    justify-content: center;
+  }
+
+  .pipeline-track {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pipeline-node {
+    min-height: auto;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner-card {
+    grid-template-columns: 1fr;
+    padding: 44px 32px;
+    gap: 40px;
+  }
+
+  .use-case-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE SCREENS (Max 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --section-padding-y: 64px;
+  }
+
+  .container, .container-hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Mobile Navigation Drawer */
+  .mobile-toggle {
+    display: block;
+    z-index: 102;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 340px;
+    height: 100vh;
+    background: rgba(8, 12, 24, 0.98);
+    backdrop-filter: var(--glass-blur-xl);
+    -webkit-backdrop-filter: var(--glass-blur-xl);
+    border-left: 1px solid var(--border-medium);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 32px 40px 32px;
+    gap: 24px;
+    transition: right var(--transition-slow);
+    z-index: 101;
+    box-shadow: -20px 0 50px rgba(0, 0, 0, 0.9);
+  }
+
+  .nav-menu.is-open {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+  }
+
+  .nav-actions .btn {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 8vw, 2.9rem);
+  }
+
+  .bento-card-medium, .bento-card-third {
+    grid-column: span 12;
+  }
+
+  .workflow-container {
+    padding: 28px 20px;
+  }
+
+  .workflow-scenario-toggle {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .telemetry-chip {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+
+  .hud-node-status {
+    top: 10px;
+    left: 10px;
+  }
+
+  .hud-latency {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .hud-activity {
+    display: none; /* Hide third HUD on small mobile screens to prevent clutter */
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SMALL MOBILE SCREENS (Max 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-number {
+    font-size: 2.5rem;
+  }
+
+  .tab-nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .modal-dialog {
+    padding: 28px 20px;
+  }
+
+  .cta-banner-card {
+    padding: 32px 18px;
+  }
+}

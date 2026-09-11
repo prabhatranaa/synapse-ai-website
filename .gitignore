@@ -1,0 +1,13 @@
+# System & temporary files
+.DS_Store
+Thumbs.db
+*.log
+
+# Test & verification artifacts
+test_*.py
+*screenshot*.png
+*preview*.png
+verify-*.png
+hero-*.png
+edgetmp/
+.vercel/

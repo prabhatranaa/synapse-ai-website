@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synapse AI | Autonomous Enterprise AI Platform</title>
+  <meta name="description" content="Intelligence that moves your business forward. Transform complex enterprise workflows into autonomous, self-healing automated systems.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Background Canvas & Ambient Mesh -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-glow-layer" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+  </div>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       HEADER / NAVIGATION
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container-hero nav-inner">
+      <a href="#" class="brand-logo" aria-label="Synapse AI Homepage">
+        <div class="brand-glyph">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span>SYNAPSE<span class="brand-text-accent">.AI</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+          <li><a href="#workflow" class="nav-link">Workflow Engine</a></li>
+          <li><a href="#metrics" class="nav-link">Performance</a></li>
+          <li><a href="#use-cases" class="nav-link">Solutions</a></li>
+          <li><a href="#how-it-works" class="nav-link">Architecture</a></li>
+          <li><a href="#testimonials" class="nav-link">Enterprise</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#demo-modal" class="nav-signin-btn js-open-demo-modal">Sign In</a>
+        <button class="btn btn-primary btn-sm js-open-demo-modal">
+          <span>Book Demo</span>
+          <span class="arrow-icon">→</span>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         HERO SECTION (16:9 LAYOUT & SEAMLESS VIDEO INTEGRATION)
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container-hero">
+        <div class="hero-grid">
+
+          <!-- Left Column: Premium Typography & CTAs -->
+          <div class="hero-content reveal-on-scroll">
+            <div class="hero-badge-wrap">
+              <div class="badge-pill badge-electric">
+                <span class="status-dot"></span>
+                <span>Next-Gen Enterprise Orchestration 3.0</span>
+              </div>
+            </div>
+
+            <h1 class="hero-title">
+              Intelligence That Moves Your <span class="title-accent">Business Forward</span>
+            </h1>
+
+            <p class="hero-description">
+              Transform complex workflows into intelligent, automated systems.
+            </p>
+
+            <div class="hero-cta-group">
+              <button class="btn btn-primary btn-lg js-open-demo-modal">
+                <span>Get Started</span>
+                <span class="arrow-icon">→</span>
+              </button>
+              <a href="#workflow" class="btn btn-secondary btn-lg">
+                <span>Explore Platform</span>
+              </a>
+            </div>
+
+            <!-- Enterprise Trust Verification Badges -->
+            <div class="hero-trust-strip">
+              <div class="hero-trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span>SOC 2 Type II Certified</span>
+              </div>
+              <div class="hero-trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                <span>Zero Data-Retention Guarantee</span>
+              </div>
+              <div class="hero-trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span>99.99% Enterprise SLA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: AI Core Video with Natural Seamless Blending -->
+          <div class="hero-visual-wrapper reveal-on-scroll delay-2">
+            <div class="hero-ambient-glow-core" aria-hidden="true"></div>
+
+            <div class="video-frame-container">
+              <!-- Actual AI Core MP4 Video (1080p, 16:9, seamless borderless ambient blend) -->
+              <video
+                id="ai-core-video"
+                class="ai-core-video"
+                src="assets/ai-core.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                webkit-playsinline
+                disablepictureinpicture
+                disableremoteplayback
+                preload="auto"
+                aria-label="Synapse Autonomous AI Core Neural Visualization">
+                <source src="assets/ai-core.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <!-- Floating Glass HUD Telemetry Badges -->
+              <div class="telemetry-chip hud-node-status">
+                <div class="telemetry-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <div>
+                  <span class="telemetry-label">Neural Core Integrity</span>
+                  <div class="telemetry-value">
+                    <span class="status-dot emerald"></span>
+                    <span>99.98% OPERATIONAL</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="telemetry-chip hud-latency">
+                <div class="telemetry-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="telemetry-label">Inference Latency</span>
+                  <div class="telemetry-value">14.2 ms</div>
+                </div>
+              </div>
+
+              <div class="telemetry-chip hud-activity">
+                <div class="telemetry-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
+                <div>
+                  <span class="telemetry-label">Autonomous Agents</span>
+                  <div class="telemetry-value">1,420 Active Swarm</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 1: TRUSTED-BY / COMPANY LOGO STRIP
+         ========================================================================= -->
+    <section class="section-trusted" aria-label="Trusted Enterprise Partners">
+      <div class="container">
+        <p class="trusted-intro">
+          Powering mission-critical workflows across <span>Fortune 500</span> enterprises
+        </p>
+
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <!-- First Set -->
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon></svg>
+              <span>DATABRICKS</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.5 5.5l13 13M18.5 5.5l-13 13"></path></svg>
+              <span>SNOWFLAKE</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path></svg>
+              <span>PALANTIR</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"></rect></svg>
+              <span>CLOUDFLARE</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>SCALE AI</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path></svg>
+              <span>STRIPE</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+              <span>GOLDMAN SACHS</span>
+            </div>
+
+            <!-- Duplicate Set for Seamless Continuous Loop -->
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon></svg>
+              <span>DATABRICKS</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.5 5.5l13 13M18.5 5.5l-13 13"></path></svg>
+              <span>SNOWFLAKE</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path></svg>
+              <span>PALANTIR</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"></rect></svg>
+              <span>CLOUDFLARE</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>SCALE AI</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path></svg>
+              <span>STRIPE</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+              <span>GOLDMAN SACHS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: PLATFORM CAPABILITIES (BENTO MATRIX)
+         ========================================================================= -->
+    <section class="section-capabilities" id="capabilities">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="badge-pill badge-violet" style="margin-bottom: 16px;">
+            <span>Core Capabilities</span>
+          </div>
+          <h2>Architected for Extreme Scale & Precision</h2>
+          <p class="section-subtitle">
+            A unified autonomous substrate engineered to operate seamlessly across high-volume enterprise systems with zero data leakage.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+
+          <!-- Bento Card 1: Multi-Agent Swarm (Large) -->
+          <div class="glass-card bento-card-large reveal-on-scroll">
+            <div>
+              <div class="card-icon-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h3 class="bento-card-title">Autonomous Multi-Agent Swarms</h3>
+              <p class="bento-card-desc">
+                Deploy dynamic agent hierarchies that plan, debate, self-correct, and execute complex multi-step objectives without manual intervention. Each agent maintains role-based isolation with strict memory boundary fences.
+              </p>
+            </div>
+
+            <div class="bento-swarm-visual">
+              <div class="swarm-node">
+                <span class="status-dot emerald"></span>
+                <span>Synthesizer_Agent_01</span>
+              </div>
+              <div class="swarm-link-pulse"></div>
+              <div class="swarm-node">
+                <span class="status-dot"></span>
+                <span>Consensus_Auditor_04</span>
+              </div>
+              <div class="swarm-link-pulse"></div>
+              <div class="swarm-node">
+                <span class="status-dot emerald"></span>
+                <span>Execution_Kernel</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 2: Cognitive Decision Engine -->
+          <div class="glass-card bento-card-medium reveal-on-scroll delay-1">
+            <div>
+              <div class="card-icon-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+              </div>
+              <h3 class="bento-card-title">Cognitive Decision Engine</h3>
+              <p class="bento-card-desc">
+                Sub-millisecond inference orchestration that evaluates query complexity, token budget, and precision constraints to dynamically route between specialized foundation models.
+              </p>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--electric-cyan); margin-top: 20px;">
+              ● Dynamic Cost-Latency Optimization: ON
+            </div>
+          </div>
+
+          <!-- Bento Card 3: Deterministic Guardrails -->
+          <div class="glass-card bento-card-third reveal-on-scroll">
+            <div>
+              <div class="card-icon-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h3 class="bento-card-title">Enterprise Guardrails</h3>
+              <p class="bento-card-desc">
+                Real-time hallucination prevention, automatic PII sanitization, and mathematical constraint verification before any action is executed.
+              </p>
+            </div>
+            <div class="metric-delta-tag">0.00% Unsanitized PII Leakage</div>
+          </div>
+
+          <!-- Bento Card 4: Universal ERP & Cloud Mesh -->
+          <div class="glass-card bento-card-third reveal-on-scroll delay-1">
+            <div>
+              <div class="card-icon-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h3 class="bento-card-title">Universal Enterprise Mesh</h3>
+              <p class="bento-card-desc">
+                Bi-directional connectors for SAP, Salesforce, ServiceNow, Snowflake, and AWS. Zero custom boilerplate required.
+              </p>
+            </div>
+            <div class="metric-delta-tag">180+ Enterprise Connectors</div>
+          </div>
+
+          <!-- Bento Card 5: Real-Time Observability -->
+          <div class="glass-card bento-card-third reveal-on-scroll delay-2">
+            <div>
+              <div class="card-icon-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <h3 class="bento-card-title">Trace Observability</h3>
+              <p class="bento-card-desc">
+                Full cryptographic decision lineage. Inspect every agent thought, token expenditure, and intermediate verification checkpoint.
+              </p>
+            </div>
+            <div class="metric-delta-tag">Full Audit Hash Lineage</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: AI WORKFLOW VISUALIZATION (INTERACTIVE PIPELINE)
+         ========================================================================= -->
+    <section class="section-workflow" id="workflow">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="badge-pill badge-electric" style="margin-bottom: 16px;">
+            <span>Interactive Architecture</span>
+          </div>
+          <h2>Autonomous AI Workflow Engine</h2>
+          <p class="section-subtitle">
+            Inspect how high-dimensional telemetry flows through our 5-stage cognitive pipeline with deterministic safety guarantees.
+          </p>
+        </div>
+
+        <div class="workflow-container reveal-on-scroll">
+          <div class="workflow-header-bar">
+            <div class="workflow-title-group">
+              <h3 id="workflow-headline">Autonomous Financial Fraud Interception</h3>
+              <p id="workflow-subline">Multi-layered cognitive verification executing in under 24ms across high-throughput payment rails.</p>
+            </div>
+
+            <div class="workflow-scenario-toggle" role="tablist" aria-label="Workflow Scenarios">
+              <button class="scenario-btn is-active" data-scenario="fraud">Fintech Fraud</button>
+              <button class="scenario-btn" data-scenario="support">Infra DevOps</button>
+              <button class="scenario-btn" data-scenario="supply">Global Supply Chain</button>
+            </div>
+          </div>
+
+          <!-- 5-Stage Animated Pipeline Track -->
+          <div class="pipeline-track">
+            <!-- Node 1 -->
+            <div class="pipeline-node is-active-step">
+              <div>
+                <div class="node-step-index">
+                  <span>STEP 01</span>
+                  <span class="status-dot"></span>
+                </div>
+                <h4 class="node-title">Ingestion & Enrichment</h4>
+                <p class="node-desc">Ingesting 85,000 tx/sec with IP geolocation, device biometrics, and historical velocity tags.</p>
+              </div>
+              <div class="node-metric"><span>●</span> Ingestion: 2.1ms</div>
+            </div>
+
+            <!-- Node 2 -->
+            <div class="pipeline-node">
+              <div>
+                <div class="node-step-index">
+                  <span>STEP 02</span>
+                  <span class="status-dot"></span>
+                </div>
+                <h4 class="node-title">Cognitive Vector Search</h4>
+                <p class="node-desc">Querying 120M high-dimensional transaction embeddings for topological anomalies.</p>
+              </div>
+              <div class="node-metric"><span>●</span> Similarity: 0.994</div>
+            </div>
+
+            <!-- Node 3 -->
+            <div class="pipeline-node">
+              <div>
+                <div class="node-step-index">
+                  <span>STEP 03</span>
+                  <span class="status-dot"></span>
+                </div>
+                <h4 class="node-title">Agentic Consensus</h4>
+                <p class="node-desc">3 autonomous neural auditors debate transaction risk score against enterprise policy.</p>
+              </div>
+              <div class="node-metric"><span>●</span> Consensus: 99.8%</div>
+            </div>
+
+            <!-- Node 4 -->
+            <div class="pipeline-node">
+              <div>
+                <div class="node-step-index">
+                  <span>STEP 04</span>
+                  <span class="status-dot"></span>
+                </div>
+                <h4 class="node-title">Autonomous Action</h4>
+                <p class="node-desc">Instant ledger escrow freeze and dynamic step-up authentication webhook trigger.</p>
+              </div>
+              <div class="node-metric"><span>●</span> Action: Complete</div>
+            </div>
+
+            <!-- Node 5 -->
+            <div class="pipeline-node">
+              <div>
+                <div class="node-step-index">
+                  <span>STEP 05</span>
+                  <span class="status-dot emerald"></span>
+                </div>
+                <h4 class="node-title">Deterministic Audit</h4>
+                <p class="node-desc">Cryptographic hash generation and SOC2 compliance telemetry streamed to Snowflake.</p>
+              </div>
+              <div class="node-metric"><span>●</span> Audit Hash: #9f8a2</div>
+            </div>
+          </div>
+
+          <!-- Live Event Terminal Feed -->
+          <div class="workflow-live-terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+              <span>LIVE TELEMETRY STREAM // KERNEL-LOGS</span>
+              <span>BUFFER: OK</span>
+            </div>
+            <div class="terminal-logs" id="terminal-logs">
+              <!-- Rendered dynamically by workflow.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: KEY METRICS / STATISTICS
+         ========================================================================= -->
+    <section class="section-metrics" id="metrics">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="badge-pill badge-violet" style="margin-bottom: 16px;">
+            <span>Validated Performance</span>
+          </div>
+          <h2>Engineered for Uncompromising Enterprise ROI</h2>
+          <p class="section-subtitle">
+            Measured across production environments managing billions of autonomous operations every month.
+          </p>
+        </div>
+
+        <div class="metrics-grid">
+          <!-- Metric 1 -->
+          <div class="glass-card metric-card reveal-on-scroll">
+            <div>
+              <div class="metric-value-wrap">
+                <span class="metric-number" data-target="99.98" data-decimals="2" data-suffix="%">0.00%</span>
+              </div>
+              <div class="metric-label">Autonomous Completion</div>
+              <p class="metric-detail">End-to-end task completion without requiring human escalation or intervention.</p>
+            </div>
+            <div class="metric-delta-tag">+4.2% YoY Improvement</div>
+          </div>
+
+          <!-- Metric 2 -->
+          <div class="glass-card metric-card reveal-on-scroll delay-1">
+            <div>
+              <div class="metric-value-wrap">
+                <span class="metric-number" data-target="14.2" data-decimals="1" data-suffix="x">0.0x</span>
+              </div>
+              <div class="metric-label">Operational Velocity</div>
+              <p class="metric-detail">Acceleration factor in incident resolution and high-volume data transformation.</p>
+            </div>
+            <div class="metric-delta-tag">Benchmarked vs Legacy BPM</div>
+          </div>
+
+          <!-- Metric 3 -->
+          <div class="glass-card metric-card reveal-on-scroll delay-2">
+            <div>
+              <div class="metric-value-wrap">
+                <span class="metric-number" data-target="4.2" data-decimals="1" data-prefix="$" data-suffix="M">$0.0M</span>
+              </div>
+              <div class="metric-label">Annual Cost Avoidance</div>
+              <p class="metric-detail">Average cost reduction per enterprise deployment via eliminated manual rework.</p>
+            </div>
+            <div class="metric-delta-tag">Independent Forrester Audit</div>
+          </div>
+
+          <!-- Metric 4 -->
+          <div class="glass-card metric-card reveal-on-scroll delay-3">
+            <div>
+              <div class="metric-value-wrap">
+                <span class="metric-unit">&lt;</span>
+                <span class="metric-number" data-target="28" data-decimals="0" data-suffix="ms">0ms</span>
+              </div>
+              <div class="metric-label">Global P99 Latency</div>
+              <p class="metric-detail">Median round-trip inference execution across 34 edge data centers worldwide.</p>
+            </div>
+            <div class="metric-delta-tag">Global Anycast Network</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: USE CASES
+         ========================================================================= -->
+    <section class="section-use-cases" id="use-cases">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="badge-pill badge-electric" style="margin-bottom: 16px;">
+            <span>Industry Solutions</span>
+          </div>
+          <h2>Proven Across Mission-Critical Domains</h2>
+          <p class="section-subtitle">
+            Tailored cognitive pipelines deployed in environments where zero errors are tolerated.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="tab-nav reveal-on-scroll">
+          <button class="tab-btn is-active use-case-tab" data-category="all">All Industries</button>
+          <button class="tab-btn use-case-tab" data-category="fintech">Fintech & Banking</button>
+          <button class="tab-btn use-case-tab" data-category="health">Healthcare & Biotech</button>
+          <button class="tab-btn use-case-tab" data-category="devops">DevOps & Cloud</button>
+        </div>
+
+        <div class="use-case-card-grid">
+
+          <!-- Case 1: Fintech -->
+          <div class="glass-card use-case-card use-case-panel reveal-on-scroll" data-category="fintech">
+            <div>
+              <span class="use-case-tag">Fintech & Capital Markets</span>
+              <h3 class="use-case-title">Algorithmic Compliance & Trade Reconciliation</h3>
+              <p class="use-case-desc">
+                Continuous ingestion of FIX order streams, SWIFT messages, and multi-asset trade executions. Autonomous agents identify clearing discrepancies and resolve ledger imbalances before market settlement deadlines.
+              </p>
+            </div>
+            <div class="use-case-stats-row">
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">99.994%</span>
+                <span class="stat-micro-lbl">Accuracy Rate</span>
+              </div>
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">$18.4M</span>
+                <span class="stat-micro-lbl">Dispute Savings</span>
+              </div>
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">12ms</span>
+                <span class="stat-micro-lbl">Reconcile Time</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 2: Healthcare -->
+          <div class="glass-card use-case-card use-case-panel reveal-on-scroll delay-1" data-category="health">
+            <div>
+              <span class="use-case-tag">Healthcare & Life Sciences</span>
+              <h3 class="use-case-title">Clinical Protocol Extraction & Regulatory Synthesis</h3>
+              <p class="use-case-desc">
+                Air-gapped HIPAA-compliant agents extract unstructured clinical trial records, cross-reference FDA guidelines, and synthesize adverse event reports with complete cryptographic provenance.
+              </p>
+            </div>
+            <div class="use-case-stats-row">
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">100%</span>
+                <span class="stat-micro-lbl">HIPAA Air-Gap</span>
+              </div>
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">8.6x</span>
+                <span class="stat-micro-lbl">Submission Speed</span>
+              </div>
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">Zero</span>
+                <span class="stat-micro-lbl">External Leakage</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 3: DevOps -->
+          <div class="glass-card use-case-card use-case-panel reveal-on-scroll" data-category="devops">
+            <div>
+              <span class="use-case-tag">Cloud Infrastructure</span>
+              <h3 class="use-case-title">Autonomous Incident Triage & Self-Healing Clusters</h3>
+              <p class="use-case-desc">
+                When alerting cascades strike across thousands of Kubernetes pods, Synapse isolates root cause, generates isolated canary patches, and executes safe rollbacks within 90 seconds.
+              </p>
+            </div>
+            <div class="use-case-stats-row">
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">84%</span>
+                <span class="stat-micro-lbl">MTTR Reduction</span>
+              </div>
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">4,200+</span>
+                <span class="stat-micro-lbl">Pods Managed</span>
+              </div>
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">0 Downtime</span>
+                <span class="stat-micro-lbl">Canary Shield</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 4: Enterprise Operations -->
+          <div class="glass-card use-case-card use-case-panel reveal-on-scroll delay-1" data-category="fintech">
+            <div>
+              <span class="use-case-tag">Enterprise Operations</span>
+              <h3 class="use-case-title">Autonomous Contract Redlining & Vendor Risk Analysis</h3>
+              <p class="use-case-desc">
+                Multi-agent legal review comparing complex vendor Master Service Agreements against strict corporate governance checklists, identifying indemnification liabilities in real time.
+              </p>
+            </div>
+            <div class="use-case-stats-row">
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">74%</span>
+                <span class="stat-micro-lbl">Legal Review Time</span>
+              </div>
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">100%</span>
+                <span class="stat-micro-lbl">Policy Adherence</span>
+              </div>
+              <div class="stat-micro-item">
+                <span class="stat-micro-val">&lt; 4 Mins</span>
+                <span class="stat-micro-lbl">Full Redline Turnaround</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6: HOW IT WORKS (3-STEP JOURNEY)
+         ========================================================================= -->
+    <section class="section-how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="badge-pill badge-violet" style="margin-bottom: 16px;">
+            <span>Deployment Architecture</span>
+          </div>
+          <h2>From Ingestion to Autonomous Execution</h2>
+          <p class="section-subtitle">
+            Deploy on-premise, VPC, or multi-cloud with enterprise security guardrails established on day one.
+          </p>
+        </div>
+
+        <div class="steps-container">
+
+          <!-- Step 1 -->
+          <div class="glass-card step-card reveal-on-scroll">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Zero-Friction Ingestion</h3>
+            <p class="step-desc">
+              Connect existing enterprise data repositories, ERP databases, message queues, and API gateways in under 15 minutes with our encrypted mesh agent.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-card step-card reveal-on-scroll delay-1">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Define Safety Boundaries</h3>
+            <p class="step-desc">
+              Establish deterministic business limits, approval gates, cost controls, and role-based access control policies. Nothing runs without governance.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-card step-card reveal-on-scroll delay-2">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Autonomous Operation</h3>
+            <p class="step-desc">
+              Release self-healing agent swarms to automate complex workflows 24/7. System continuously distills telemetry to improve precision autonomously.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 7: CUSTOMER TESTIMONIALS
+         ========================================================================= -->
+    <section class="section-testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="badge-pill badge-electric" style="margin-bottom: 16px;">
+            <span>Executive Endorsements</span>
+          </div>
+          <h2>Trusted by Leaders Running Global Scale</h2>
+          <p class="section-subtitle">
+            Here is how world-class engineering and operations teams transform their productivity with Synapse AI.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <!-- Testimonial 1 -->
+          <div class="glass-card testimonial-card reveal-on-scroll">
+            <div>
+              <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+              <blockquote class="testimonial-quote">
+                "Synapse reduced our Tier-3 incident triage and resolution time by 82% in the first quarter alone. The deterministic guardrails gave our compliance officers complete confidence to permit full autonomy in production."
+              </blockquote>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">MR</div>
+              <div class="author-info">
+                <h4>Marcus Reynolds</h4>
+                <p>Chief Technology Officer, Global Tier-1 Fintech</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="glass-card testimonial-card reveal-on-scroll delay-1">
+            <div>
+              <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+              <blockquote class="testimonial-quote">
+                "We replaced 9 disjointed automation tools and scripts with a single unified Synapse intelligence layer. Our engineers now build features instead of nursing broken operational pipelines."
+              </blockquote>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">EL</div>
+              <div class="author-info">
+                <h4>Elena Lindqvist</h4>
+                <p>VP of Engineering, Autonomous Logistics Unicorn</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="glass-card testimonial-card reveal-on-scroll delay-2">
+            <div>
+              <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+              <blockquote class="testimonial-quote">
+                "The cognitive decision engine’s sub-20ms latency and air-gapped security model made Synapse the only AI platform that met our strict healthcare privacy and latency standards."
+              </blockquote>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">SK</div>
+              <div class="author-info">
+                <h4>Dr. Sanjay Kapoor</h4>
+                <p>Head of Medical AI Infrastructure, BioGenix Health</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 8: FINAL CTA & ROI CALCULATOR
+         ========================================================================= -->
+    <section class="section-cta" id="cta">
+      <div class="container">
+        <div class="cta-banner-card reveal-on-scroll">
+
+          <!-- Left CTA Pitch -->
+          <div class="cta-content">
+            <div class="badge-pill badge-electric" style="margin-bottom: 16px;">
+              <span>Deploy Autonomous Intelligence</span>
+            </div>
+            <h2>Ready to Supercharge Your Enterprise?</h2>
+            <p>
+              Accelerate operational velocity and eliminate costly manual intervention with an enterprise pilot configured for your tech stack in 48 hours.
+            </p>
+            <div class="hero-cta-group">
+              <button class="btn btn-primary btn-lg js-open-demo-modal">
+                <span>Request Enterprise Pilot</span>
+                <span class="arrow-icon">→</span>
+              </button>
+              <a href="#how-it-works" class="btn btn-secondary btn-lg">
+                <span>Architecture Docs</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Interactive ROI Estimator -->
+          <div class="roi-calculator-card">
+            <div class="roi-card-header">
+              <h4>Interactive ROI Estimator</h4>
+              <span class="badge-pill badge-electric" style="font-size: 0.75rem; padding: 4px 10px;">Live Model</span>
+            </div>
+
+            <!-- Slider 1 -->
+            <div class="roi-slider-group">
+              <div class="roi-slider-label">
+                <span>Engineering & Ops Team Size</span>
+                <span id="roi-team-val">60 Engineers / Ops</span>
+              </div>
+              <input type="range" min="10" max="300" value="60" step="5" class="roi-range-slider" id="roi-team-slider" aria-label="Team Size">
+            </div>
+
+            <!-- Slider 2 -->
+            <div class="roi-slider-group">
+              <div class="roi-slider-label">
+                <span>Weekly Hours in Manual Triage</span>
+                <span id="roi-hours-val">12 hrs / week</span>
+              </div>
+              <input type="range" min="4" max="30" value="12" step="1" class="roi-range-slider" id="roi-hours-slider" aria-label="Weekly Triage Hours">
+            </div>
+
+            <!-- Output Box -->
+            <div class="roi-result-box">
+              <div style="font-size: 0.775rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;">
+                Projected Annual Enterprise Value
+              </div>
+              <div class="roi-savings-number" id="roi-savings-result">$3,230,000</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);" id="roi-hours-reclaimed">
+                28,080 hours saved/year
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       SECTION 9: MINIMAL FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="#" class="brand-logo" aria-label="Synapse AI Home">
+            <div class="brand-glyph">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span>SYNAPSE<span class="brand-text-accent">.AI</span></span>
+          </a>
+          <p>
+            Autonomous intelligence engineered to move mission-critical enterprise workflows forward with zero latency compromises.
+          </p>
+          <div class="system-status-indicator">
+            <span class="status-dot emerald"></span>
+            <span>All Systems Operational [99.99%]</span>
+          </div>
+        </div>
+
+        <!-- Column 1: Platform -->
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <ul class="footer-links">
+            <li><a href="#capabilities" class="footer-link">Agentic Swarms</a></li>
+            <li><a href="#workflow" class="footer-link">Workflow Engine</a></li>
+            <li><a href="#capabilities" class="footer-link">ERP Mesh Connectors</a></li>
+            <li><a href="#capabilities" class="footer-link">Deterministic Guardrails</a></li>
+            <li><a href="#metrics" class="footer-link">Global Edge Network</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Solutions -->
+        <div class="footer-col">
+          <h5>Solutions</h5>
+          <ul class="footer-links">
+            <li><a href="#use-cases" class="footer-link">Financial Services</a></li>
+            <li><a href="#use-cases" class="footer-link">Healthcare & Life Sciences</a></li>
+            <li><a href="#use-cases" class="footer-link">DevOps & Cloud Infra</a></li>
+            <li><a href="#use-cases" class="footer-link">Supply Chain Logistics</a></li>
+            <li><a href="#use-cases" class="footer-link">Enterprise IT Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Governance -->
+        <div class="footer-col">
+          <h5>Security</h5>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">SOC 2 Type II Report</a></li>
+            <li><a href="#" class="footer-link">HIPAA Air-Gap Spec</a></li>
+            <li><a href="#" class="footer-link">Zero Data Retention</a></li>
+            <li><a href="#" class="footer-link">Vulnerability Disclosure</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Enterprise -->
+        <div class="footer-col">
+          <h5>Enterprise</h5>
+          <ul class="footer-links">
+            <li><a href="#demo-modal" class="footer-link js-open-demo-modal">Book Executive Demo</a></li>
+            <li><a href="#cta" class="footer-link">ROI Calculator</a></li>
+            <li><a href="#" class="footer-link">Customer Portal</a></li>
+            <li><a href="#" class="footer-link">API Documentation</a></li>
+            <li><a href="#" class="footer-link">Release Notes (v3.4.0)</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Synapse AI Technologies Inc. All rights reserved. Enterprise-grade autonomous systems.
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-icon-btn" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="X / Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768m2.464-2.464l6.768-6.768"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       ENTERPRISE DEMO MODAL (LEAD CAPTURE)
+       ========================================================================= -->
+  <div class="modal-overlay" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">✕</button>
+
+      <div id="modal-form-content">
+        <div class="badge-pill badge-electric" style="margin-bottom: 14px;">
+          <span>Schedule Enterprise Briefing</span>
+        </div>
+        <h3 id="modal-title" style="font-size: 1.65rem; margin-bottom: 8px;">Experience Synapse AI</h3>
+        <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 24px;">
+          Connect directly with our AI solutions architects for a technical walkthrough configured with your existing infrastructure.
+        </p>
+
+        <form id="enterprise-demo-form">
+          <div class="form-group">
+            <label class="form-label" for="work-email">Corporate Email Address</label>
+            <input type="email" id="work-email" class="form-input" placeholder="alex@fortune500.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="company-name">Company / Organization</label>
+            <input type="text" id="company-name" class="form-input" placeholder="Enterprise Global Inc." required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="use-case-interest">Primary Workflow Focus</label>
+            <select id="use-case-interest" class="form-select" required>
+              <option value="" disabled selected>Select Primary Objective</option>
+              <option value="fintech">Financial Fraud & Compliance Reconciliation</option>
+              <option value="devops">Cloud Infrastructure Self-Healing & Incident Triage</option>
+              <option value="health">Clinical & Healthcare Air-Gapped Extraction</option>
+              <option value="supply">Supply Chain Predictive Routing</option>
+              <option value="custom">Custom Enterprise Swarm Architecture</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; margin-top: 8px;">
+            <span>Confirm Executive Briefing</span>
+            <span class="arrow-icon">→</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div id="modal-success-content" style="display: none; text-align: center; padding: 20px 0;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--neon-emerald); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; color: var(--neon-emerald);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Briefing Confirmed</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+          Your enterprise briefing request has been registered. An executive solutions architect will deliver your dedicated credentials and architecture brief within 2 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/spotlight.js"></script>
+  <script src="js/workflow.js"></script>
+  <script src="js/counters.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
